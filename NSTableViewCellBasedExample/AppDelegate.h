@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource>
+
+@property (weak) IBOutlet NSTableView *tableView;
+@property (strong) NSMutableArray* dataArray;
 
 
 @end
